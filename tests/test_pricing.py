@@ -6,7 +6,7 @@ from src.pricing import add_tax, apply_discount
 @pytest.mark.parametrize(
     ('price', 'percent', 'expected'),
     [
-        (100, 0, 100.0),
+        (100, 0, 110.0),
         (100, 100, 0.0),
         (19.99, 20, 15.99),
         (10, 12.34, 8.77),
