@@ -11,3 +11,5 @@ def add_tax(price, rate=0.18):
 #adding this line to see how cache saves time.
 
 #check 2, warm 2
+
+#this line to test lab 4

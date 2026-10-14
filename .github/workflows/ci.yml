@@ -22,7 +22,11 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Select tests
+        id: sel
+        run: echo "tests=$(python scripts/select_tests.py)" >> $GITHUB_OUTPUT
+
       - name: Run tests
         run: |
           set -o pipefail
-          pytest 2>&1 | tee build.log
+          pytest ${{ steps.sel.outputs.tests }} 2>&1 | tee build.log
